@@ -80,7 +80,6 @@ const game_modinfo_t * DLLINTERNAL lookup_game(const char *name) {
 			}
 
 			return(imod);
-		}
 	}
 	// no match found
 	return(NULL);
