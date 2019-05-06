@@ -1,2 +1,13 @@
-#temporary files
+# Temporary files
 *~
+*.tmp
+*.swp
+# Objects
+*.o
+# Binaries
+*.a
+*.dll
+*.so
+# Backup Files
+*.bak
+*.bk
