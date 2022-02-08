@@ -219,10 +219,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\linkgame.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\linkplug.cpp"
 				>
 			</File>
@@ -239,10 +235,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\mhook.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\mlist.cpp"
 				>
 			</File>
@@ -252,10 +244,6 @@
 			</File>
 			<File
 				RelativePath=".\mplugin.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\mqueue.cpp"
 				>
 			</File>
 			<File
@@ -291,15 +279,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\studioapi.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\support_meta.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\thread_logparse.cpp"
 				>
 			</File>
 			<File
@@ -385,10 +365,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\mhook.h"
-				>
-			</File>
-			<File
 				RelativePath=".\mlist.h"
 				>
 			</File>
@@ -402,10 +378,6 @@
 			</File>
 			<File
 				RelativePath=".\mplugin.h"
-				>
-			</File>
-			<File
-				RelativePath=".\mqueue.h"
 				>
 			</File>
 			<File
@@ -445,15 +417,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\studioapi.h"
-				>
-			</File>
-			<File
 				RelativePath=".\support_meta.h"
-				>
-			</File>
-			<File
-				RelativePath=".\thread_logparse.h"
 				>
 			</File>
 			<File
