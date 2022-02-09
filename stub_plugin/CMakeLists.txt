@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.0.0)
+
 project(STUBPLUGIN CXX)
 
 include_directories( . ../metamod ../hlsdk/ ../hlsdk/common/ ../hlsdk/dlls/ ../hlsdk/engine/ ../hlsdk/pm_shared/ )

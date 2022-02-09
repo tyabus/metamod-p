@@ -1,6 +1,6 @@
-project(METAMOD CXX)
-
 cmake_minimum_required(VERSION 3.0.0)
+
+project(METAMOD CXX)
 
 message("Compiling metamod-p for ${CMAKE_SYSTEM_NAME} ${CMAKE_SYSTEM_PROCESSOR}")
 
