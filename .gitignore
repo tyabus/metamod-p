@@ -1,13 +1,39 @@
-# Temporary files
+### Temporary files ###
 *~
 *.tmp
 *.swp
-# Objects
+*.save
+### Objects ###
 *.o
-# Binaries
+*.lib
+### Binaries ###
 *.a
+*.lib
 *.dll
 *.so
-# Backup Files
+### Backup Files ###
 *.bak
 *.bk
+### CMake ###
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
+build/
+
+### VS Crap ###
+*.vcxproj.filters
+*.sdf
+*.pdb
+*.user
+*.suo
+*.exp
+Debug/
+Release/
+ipch/
+
+### Misc ###
+msgs/
+opt.*/
+debug.*/
