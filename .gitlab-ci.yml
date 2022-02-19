@@ -1,0 +1,61 @@
+image: ubuntu:xenial
+
+stages:
+  - metamod_i386_goldsrc
+  - metamod_i386_xash3d
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+cache:
+  key: $CI_JOB_NAME-$CI_COMMIT_REF_SLUG
+  paths:
+    - ccache
+
+metamood_i386_goldsrc:
+  stage: metamod_i386_goldsrc
+  before_script:
+  - dpkg --add-architecture i386
+  - apt update
+  - apt install -y git cmake ccache p7zip-full gcc-multilib g++-multilib build-essential zlib1g:i386 libstdc++6:i386
+  - mkdir -p ccache
+  - export PATH="/usr/lib/ccache:$PATH"
+  - export CCACHE_BASEDIR="$PWD"
+  - export CCACHE_DIR="$PWD/ccache"
+  - export CCACHE_COMPILERCHECK=content
+  - ccache --zero-stats || true
+  - ccache --show-stats || true
+  after_script:
+  - export CCACHE_DIR="$PWD/ccache"
+  - ccache --show-stats
+  script:
+  - export CC="gcc -m32"
+  - export CXX="gcc -m32"
+  - make -j2
+  artifacts:
+    paths:
+    - metamod/debug.linux_i386/metamod.so
+    
+metamood_i386_xash3d:
+  stage: metamod_i386_xash3d
+  before_script:
+  - dpkg --add-architecture i386
+  - apt update
+  - apt install -y git cmake ccache p7zip-full gcc-multilib g++-multilib build-essential zlib1g:i386 libstdc++6:i386
+  - mkdir -p ccache
+  - export PATH="/usr/lib/ccache:$PATH"
+  - export CCACHE_BASEDIR="$PWD"
+  - export CCACHE_DIR="$PWD/ccache"
+  - export CCACHE_COMPILERCHECK=content
+  - ccache --zero-stats || true
+  - ccache --show-stats || true
+  after_script:
+  - export CCACHE_DIR="$PWD/ccache"
+  - ccache --show-stats
+  script:
+  - export CC="gcc -m32"
+  - export CXX="gcc -m32"
+  - make XASH3D=1 -j2
+  artifacts:
+    paths:
+    - metamod/debug.linux_i386/metamod.so
